@@ -1,0 +1,11 @@
+<%-include("partials/header.ejs") %>
+<div class="products">
+    <% if(locals.prods) {prods.forEach(prod=>{%>
+        <h1><%= prod.title %></h1>
+        <% })
+       } else {%>
+            <h1>No Prod</h1>
+    <% } %>
+</div>
+
+<%-include("partials/footer.ejs") %>

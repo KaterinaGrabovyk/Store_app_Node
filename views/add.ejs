@@ -1,0 +1,14 @@
+<%-include("partials/header.ejs") %>
+<h1>Add</h1>
+<div class="Form">
+    <form action="/add" method="POST">
+        <h3>Title</h3>
+        <input type="text" name="title" value="twst" required>
+        <h3>Price</h3>
+        <input type="number" name="price" step="0.01" min="0" value="00.00" required>
+        <h3>Amount</h3>
+        <input type="number" name="amount" min="0" value="0"  required>
+        <button type="submit">Ok</button>
+    </form>
+</div>
+<%-include("partials/footer.ejs") %>
