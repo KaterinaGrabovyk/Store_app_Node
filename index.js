@@ -54,12 +54,10 @@ app.post("/update/:id",async(req,res)=>{
         var response;
         var filtered=Object.entries(req.body).filter(([key, value]) => value !== '');
         if(filtered.length<3&&filtered.length!=0){
-            console.log(filtered)
             response=await axios.patch(`http://localhost:8000/products/update/${id}`,Object.fromEntries(filtered),{ headers: {"Content-Type": "application/x-www-form-urlencoded"}});
             console.log(response["data"]);
             res.redirect("/"); 
         }else if(filtered.length===3){
-            console.log(req.body)
              response=await axios.put(`http://localhost:8000/products/update/${id}`,req.body,{ headers: {"Content-Type": "application/x-www-form-urlencoded"}});
              console.log(response["data"]);
              res.redirect("/"); 

@@ -1,0 +1,17 @@
+.products{
+    display: flex;
+    gap: 20px;
+}
+.product{
+    border: 1px solid black;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content{
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+}
