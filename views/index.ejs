@@ -1,17 +1,17 @@
 <%-include("partials/header.ejs") %>
-<a href="/add">Add</a>
+<a href="/add" id="add" class="button">Add</a>
 <div class="products">
   <% if(locals.prods.length>0) {prods.forEach(prod=>{%>
   <div class="product" id="<%= prod.id %>">
     <div class="content">
-      <h2>title: <%= prod.title %></h2>
-      <p>amount: <%= prod.amount %></p>
-      <p>price: <%= prod.price %></p>
-      <p>in_stock: <%= prod.in_stock %></p>
+      <div><p>title: </p><h2><%= prod.title %></h2></div>
+      <div><p>amount: </p><h2><%= prod.amount %></h2></div>
+      <div><p>price: </p><h2><%= prod.price %> $</h2></div>
+      <div><p>in_stock: </p><h2><%= prod.in_stock %></h2></div>
     </div>
-    <div class="button">
-      <a href="/update/<%= prod.id %>">Update</a>
-      <button onclick="confirmDelet('<%= prod.id %>')" method="get">
+    <div class="buttons">
+      <a href="/update/<%= prod.id %>" class="update button " >Update</a>
+      <button onclick="confirmDelet('<%= prod.id %>')" method="get" class="delete button">
         Delete
       </button>
     </div>
@@ -27,7 +27,7 @@
     }
   </script>
   <% }); } else {%>
-  <div class=""><h1>No Products</h1></div>
+  <h1>No Products</h1>
   <% } %>
 </div>
 

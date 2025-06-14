@@ -1,14 +1,25 @@
 <%-include("partials/header.ejs") %>
-<h1>Update</h1>
+<a href="/" class="back button">Back</a>
 <div class="Form">
-    <form action="/update/<%= item.id%>" method="POST">
-        <h3>Title</h3>
-        <input type="text" name="title" placeholder="<%= item.title %>" >
-        <h3>Price</h3>
-        <input type="number" name="price" step="0.01" min="0" placeholder="<%= item.price %>"  >
-        <h3>Amount</h3>
-        <input type="number" name="amount" min="0" placeholder="<%= item.amount %>"   >
-        <button type="submit">Ok</button>
-    </form>
+  <form action="/update/<%= item.id%>" method="POST">
+    <h3>Title</h3>
+    <input type="text" name="title" placeholder="<%= item.title %>" />
+    <h3>Price</h3>
+    <input
+      type="number"
+      name="price"
+      step="0.01"
+      min="0"
+      placeholder="<%= item.price %>"
+    />
+    <h3>Amount</h3>
+    <input
+      type="number"
+      name="amount"
+      min="0"
+      placeholder="<%= item.amount %>"
+    />
+    <button type="submit" class="button ok">Ok</button>
+  </form>
 </div>
 <%-include("partials/footer.ejs") %>

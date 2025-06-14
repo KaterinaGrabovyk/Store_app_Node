@@ -1,5 +1,5 @@
 <%-include("partials/header.ejs") %>
-<h1>Add</h1>
+<a href="/" class="back button">Back</a>
 <div class="Form">
     <form action="/add" method="POST">
         <h3>Title</h3>
@@ -8,7 +8,7 @@
         <input type="number" name="price" step="0.01" min="0" placeholder="00.00" required>
         <h3>Amount</h3>
         <input type="number" name="amount" min="0" placeholder="0"  required>
-        <button type="submit">Ok</button>
+        <button type="submit" class="button ok">Ok</button>
     </form>
 </div>
 <%-include("partials/footer.ejs") %>

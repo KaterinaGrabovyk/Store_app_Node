@@ -1,17 +1,103 @@
-.products{
-    display: flex;
-    gap: 20px;
+body {
+  background-color: #ffe6e1;
 }
-.product{
-    border: 1px solid black;
-    min-width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
 }
-.content{
-    border: 1px solid black;
-    width: 200px;
-    text-align: center;
+
+button,
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  transition: background 0.2s;
+  border: none;
+}
+
+.ok {
+  background-color: #81c748;
+  margin-top: 20px;
+  width: 100%;
+}
+.ok:hover {
+  background-color: #6ecb23;
+}
+
+#add,
+.back {
+  background-color: #9fc87e;
+  width: 50px;
+}
+
+#add:hover,
+.back:hover {
+  background-color: #9edd6a;
+}
+
+.update {
+  background-color: #075b5e;
+  color: white;
+}
+
+.update:hover {
+  background-color: #0c7b7f;
+}
+
+.delete {
+  background-color: #ff3f33;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #dc392e;
+}
+
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Form * {
+  font-size: 40px;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
+}
+
+.product {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border: 2px dotted;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+}
+
+.content > div,
+.buttons {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 20px;
 }
